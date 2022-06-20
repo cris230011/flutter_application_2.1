@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        
         primarySwatch: Colors.blue,
       ),
       home: const MyHomePage(title: 'Flutter Demo Home Page'),
@@ -21,13 +20,13 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Echo extends StatelessWidget  {
+class Echo extends StatelessWidget {
   const Echo({
-    Key? key,  
+    Key? key,
     required this.text,
     this.backgroundColor = Colors.grey, //默认为灰色
-  }):super(key:key);
-    
+  }) : super(key: key);
+
   final String text;
   final Color backgroundColor;
 
@@ -45,7 +44,6 @@ class Echo extends StatelessWidget  {
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key, required this.title}) : super(key: key);
 
-
   final String title;
 
   @override
@@ -57,23 +55,18 @@ class _MyHomePageState extends State<MyHomePage> {
 
   void _incrementCounter() {
     setState(() {
-      
       _counter++;
     });
   }
 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
       appBar: AppBar(
-        
         title: Text(widget.title),
       ),
       body: Center(
-        
         child: Column(
-          
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Echo(text: "hello world"),
@@ -90,7 +83,5 @@ class _MyHomePageState extends State<MyHomePage> {
         child: const Icon(Icons.add),
       ), // This trailing comma makes auto-formatting nicer for build methods.
     );
-  }  
+  }
 }
-
-
